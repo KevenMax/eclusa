@@ -1,3 +1,10 @@
-# SISTEMA PARA GERENCIAMENTO DE ECLUSA
+# Sistema de Gerenciamento de Eclusa
 
-## Disciplina - Programação Orientada a Objetos.
+EQUIPE:
+Emanuel Maximiliano
+Keven Max
+Luis Fernando
+
+> Disciplina - Programação Orientada a Objetos
+
+
