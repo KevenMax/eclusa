@@ -26,7 +26,7 @@ import javax.swing.JSeparator;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
 
-public class cadastroView extends JFrame {
+public class CadastroView extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textField;
@@ -60,7 +60,7 @@ public class cadastroView extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					cadastroView frame = new cadastroView();
+					CadastroView frame = new CadastroView();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -72,7 +72,7 @@ public class cadastroView extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public cadastroView() {
+	public CadastroView() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 600, 500);
 		contentPane = new JPanel();

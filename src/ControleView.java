@@ -13,8 +13,10 @@ import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
+import javax.swing.JSeparator;
+import javax.swing.JButton;
 
-public class controleView extends JFrame {
+public class ControleView extends JFrame {
 
 	private JPanel contentPane;
 	private JLabel lblEmbarcao;
@@ -34,6 +36,25 @@ public class controleView extends JFrame {
 	private JTextField txtPortoOrigem;
 	private JLabel lblPortoDeDestino;
 	private JTextField txtPortoDestino;
+	private JLabel lblComportas;
+	private JSeparator separator;
+	private JLabel lblQuantidadeDeContainerspessoas;
+	private JTextField txtQntdContainersPessoas;
+	private JLabel lblPesoTotal;
+	private JTextField textField;
+	private JButton btnSalvar;
+	private JLabel lblRio;
+	private JButton btnAbrir;
+	private JButton btnFechar;
+	private JLabel lblMar;
+	private JButton btnAbrirComporta;
+	private JButton btnFecharComporta;
+	private JButton btnEncher;
+	private JButton btnSecar;
+	private JLabel lblInerir;
+	private JButton btnMarPEclusa;
+	private JButton btnRioPEclusa;
+	private JButton btnRemoverEmbarcao;
 
 	/**
 	 * Launch the application.
@@ -42,7 +63,7 @@ public class controleView extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					controleView frame = new controleView();
+					ControleView frame = new ControleView();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -54,7 +75,7 @@ public class controleView extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public controleView() {
+	public ControleView() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 600, 500);
 		contentPane = new JPanel();
@@ -149,6 +170,101 @@ public class controleView extends JFrame {
 		txtPortoDestino.setColumns(10);
 		txtPortoDestino.setBounds(288, 200, 269, 19);
 		contentPane.add(txtPortoDestino);
+		
+		lblComportas = new JLabel("Eclusa");
+		lblComportas.setFont(new Font("Dialog", Font.BOLD, 15));
+		lblComportas.setBounds(253, 317, 134, 15);
+		contentPane.add(lblComportas);
+		
+		separator = new JSeparator();
+		separator.setForeground(Color.GRAY);
+		separator.setBounds(26, 304, 557, 15);
+		contentPane.add(separator);
+		
+		lblQuantidadeDeContainerspessoas = new JLabel("Quantidade de Containers/Pessoas:");
+		lblQuantidadeDeContainerspessoas.setBounds(26, 225, 267, 15);
+		contentPane.add(lblQuantidadeDeContainerspessoas);
+		
+		txtQntdContainersPessoas = new JTextField();
+		txtQntdContainersPessoas.setColumns(10);
+		txtQntdContainersPessoas.setBounds(26, 242, 248, 19);
+		contentPane.add(txtQntdContainersPessoas);
+		
+		lblPesoTotal = new JLabel("Peso Total(KG):");
+		lblPesoTotal.setBounds(290, 225, 114, 15);
+		contentPane.add(lblPesoTotal);
+		
+		textField = new JTextField();
+		textField.setColumns(10);
+		textField.setBounds(290, 242, 267, 19);
+		contentPane.add(textField);
+		
+		btnSalvar = new JButton("Salvar");
+		btnSalvar.setBounds(440, 273, 117, 25);
+		contentPane.add(btnSalvar);
+		
+		lblRio = new JLabel("RIO:");
+		lblRio.setFont(new Font("Dialog", Font.BOLD, 13));
+		lblRio.setBounds(80, 317, 70, 15);
+		contentPane.add(lblRio);
+		
+		btnAbrir = new JButton("Abrir Comporta");
+		btnAbrir.setFont(new Font("Ubuntu", Font.BOLD, 15));
+		btnAbrir.setForeground(new Color(255, 255, 255));
+		btnAbrir.setBackground(new Color(72, 61, 139));
+		btnAbrir.setBounds(26, 335, 160, 20);
+		contentPane.add(btnAbrir);
+		
+		btnFechar = new JButton("Fechar Comporta");
+		btnFechar.setFont(new Font("Ubuntu", Font.BOLD, 15));
+		btnFechar.setBackground(new Color(72, 61, 139));
+		btnFechar.setForeground(new Color(255, 255, 255));
+		btnFechar.setBounds(26, 362, 160, 20);
+		contentPane.add(btnFechar);
+		
+		lblMar = new JLabel("MAR:");
+		lblMar.setBounds(80, 400, 70, 15);
+		contentPane.add(lblMar);
+		
+		btnAbrirComporta = new JButton("Abrir Comporta");
+		btnAbrirComporta.setForeground(Color.WHITE);
+		btnAbrirComporta.setFont(new Font("Ubuntu", Font.BOLD, 15));
+		btnAbrirComporta.setBackground(new Color(72, 61, 139));
+		btnAbrirComporta.setBounds(26, 420, 161, 20);
+		contentPane.add(btnAbrirComporta);
+		
+		btnFecharComporta = new JButton("Fechar Comporta");
+		btnFecharComporta.setForeground(Color.WHITE);
+		btnFecharComporta.setFont(new Font("Ubuntu", Font.BOLD, 15));
+		btnFecharComporta.setBackground(new Color(72, 61, 139));
+		btnFecharComporta.setBounds(26, 444, 161, 20);
+		contentPane.add(btnFecharComporta);
+		
+		btnEncher = new JButton("Encher ");
+		btnEncher.setBounds(225, 340, 117, 25);
+		contentPane.add(btnEncher);
+		
+		btnSecar = new JButton("Secar");
+		btnSecar.setBounds(225, 425, 117, 25);
+		contentPane.add(btnSecar);
+		
+		lblInerir = new JLabel("Inserir:");
+		lblInerir.setBounds(430, 317, 70, 15);
+		contentPane.add(lblInerir);
+		
+		btnMarPEclusa = new JButton("Mar p/ Eclusa");
+		btnMarPEclusa.setBounds(404, 340, 130, 25);
+		contentPane.add(btnMarPEclusa);
+		
+		btnRioPEclusa = new JButton("Rio p/ Eclusa");
+		btnRioPEclusa.setBounds(404, 372, 130, 25);
+		contentPane.add(btnRioPEclusa);
+		
+		btnRemoverEmbarcao = new JButton("Remover");
+		btnRemoverEmbarcao.setForeground(new Color(255, 255, 255));
+		btnRemoverEmbarcao.setBackground(new Color(220, 20, 60));
+		btnRemoverEmbarcao.setBounds(404, 427, 130, 25);
+		contentPane.add(btnRemoverEmbarcao);
 		
 		txtEmbarcacao.addItemListener(new java.awt.event.ItemListener() {
 		public void itemStateChanged(java.awt.event.ItemEvent evt) {
